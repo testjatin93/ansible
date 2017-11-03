@@ -61,13 +61,6 @@ matrix:
     - env: TEST=cloud/ubuntu1604
     - env: TEST=cloud/ubuntu1604py3
 build:
-  pre_ci:
-    - docker images drydock/u16pytall
-  pre_ci_boot:
-    image_name: drydock/u16pytall
-    image_tag: master
-    pull: false
-    options: "--privileged=false --net=bridge"
   ci:
     echo "done"
     #- test/utils/shippable/timing.sh test/utils/shippable/shippable.sh
